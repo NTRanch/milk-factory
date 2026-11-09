@@ -1,0 +1,28 @@
+[package]
+name = "torogao-milkfactory"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Clean-room Milk Factory systems for the Torogao remake programme: a continuous per-girl stamina production cycle with a 1:1 milk-to-coin harvest, a clicker battle loop, and a level-milestone claim board, measured from Milk Factory v1.22 (games/milk-factory-dynamics.md). No studied-game assets, text, or code."
+
+[dependencies]
+ron = "0.8"
+serde = { workspace = true }
+
+[[bin]]
+name = "milkfactory-smoke"
+path = "src/main.rs"
+
+[workspace]
+members = ["."]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+license = "BSD-2-Clause"
+rust-version = "1.85"
+version = "0.4.0"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
